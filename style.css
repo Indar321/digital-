@@ -1,0 +1,93 @@
+body {
+margin:0;
+font-family:Arial;
+background:#0a0a0a;
+color:white;
+overflow-x:hidden;
+}
+
+.container {
+width:90%;
+margin:auto;
+}
+
+.nav {
+position:fixed;
+width:100%;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(10px);
+}
+
+.nav-inner {
+display:flex;
+justify-content:space-between;
+padding:20px;
+}
+
+.logo {
+color:cyan;
+font-weight:bold;
+}
+
+.nav-links {
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+.hero {
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.glow {
+font-size:60px;
+color:cyan;
+text-shadow:0 0 20px cyan;
+}
+
+.btn {
+margin-top:20px;
+padding:10px 20px;
+background:cyan;
+color:black;
+text-decoration:none;
+}
+
+.section {
+padding:100px 20px;
+text-align:center;
+}
+
+.grid {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.card {
+background:#111;
+padding:40px;
+transition:0.3s;
+}
+
+.card:hover {
+transform:translateY(-10px);
+box-shadow:0 0 20px cyan;
+}
+
+.form {
+display:flex;
+flex-direction:column;
+width:300px;
+margin:auto;
+}
+
+input,textarea {
+margin:10px 0;
+padding:10px;
+}
