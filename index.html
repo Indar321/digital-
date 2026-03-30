@@ -245,13 +245,17 @@
         .footer-links a:hover { opacity: 1; color: var(--accent); }
         .footer-bottom { padding: 1.5rem 3rem; border-top: 1px solid #333; display: flex; justify-content: space-between; color: #888; text-transform: uppercase; }
 
-        /* Mobile Adjustments */
+        /* --- Mobile Adjustments (Fixed Top Nav Layout) --- */
         @media (max-width: 1024px) {
             * { cursor: auto !important; }
             #cursor { display: none !important; }
+            
+            /* Hide the desktop 'Start Project' button on mobile */
+            .nav-btn-desktop, .nav-links { display: none !important; }
+            
             nav { grid-template-columns: 1fr auto; }
-            .nav-links, .nav-action { display: none; }
             .hamburger { display: flex; }
+            
             .hero, .stats-strip, .about-section, .contact-section, .footer-grid, .grid-2 { grid-template-columns: 1fr; }
             .hero-img-container, .about-img { min-height: 40vh; }
             .hero-text, .about-text, .contact-form-container { border-right: none; border-bottom: 1px solid var(--border-color); padding: 3rem 2rem; }
@@ -282,7 +286,7 @@
             <a href="#pricing" class="interactable">Pricing</a>
             <a href="#contact" class="interactable">Contact</a>
         </div>
-        <a href="#contact" class="btn-dynamic interactable" style="padding: 1.5rem 2rem; border-left: 1px solid var(--border-color);">START PROJECT</a>
+        <a href="#contact" class="btn-dynamic interactable nav-btn-desktop" style="padding: 1.5rem 2rem; border-left: 1px solid var(--border-color);">START PROJECT</a>
         
         <div class="hamburger interactable">
             <span></span><span></span><span></span>
@@ -294,7 +298,7 @@
         <a href="#services" class="mobile-link">Services</a>
         <a href="#work" class="mobile-link">Work</a>
         <a href="#pricing" class="mobile-link">Pricing</a>
-        <a href="#contact" class="mobile-link mobile-action-btn">START PROJECT</a>
+        <a href="#contact" class="mobile-link btn-dynamic" style="margin-top: 2rem;">START PROJECT</a>
     </div>
 
     <main id="home" class="page active">
